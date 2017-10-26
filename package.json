@@ -1,0 +1,25 @@
+{
+  "name": "weather-app",
+  "version": "0.0.1",
+  "description": "A simple template weather app",
+  "main": "server.js",
+  "dependencies": {
+    "ejs": "^2.5.7",
+    "express": "^4.16.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Dongmin An",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dksehdals216/dksehdals216.github.io.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dksehdals216/dksehdals216.github.io/issues"
+  },
+  "homepage": "https://github.com/dksehdals216/dksehdals216.github.io#readme"
+}
