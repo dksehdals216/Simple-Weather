@@ -10,8 +10,7 @@ body {
 }
 .container {
   width: 600px;
-  margin: 0 auto;
-}
+  margin: 0 auto;}
 fieldset {
   display: block;
   -webkit-margin-start: 0px;

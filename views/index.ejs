@@ -1,26 +1,127 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Test</title>
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Welcome to Simple Weather!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <!-- styles -->
+  <link rel="stylesheet" href="/css/fancybox/jquery.fancybox.css">
+  <link href="/css/bootstrap.css" rel="stylesheet" />
+  <link href="/css/bootstrap-theme.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/slippry.css">
+  <link href="/css/style.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/color/default.css">
+  <!-- =======================================================
+    Theme URL: https://bootstrapmade.com/groovin-free-bootstrap-theme/
+  ======================================================= -->
     <link rel="stylesheet" type="text/css" href="/css/style.css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
-  </head>
-  <body>
-    <div class="container">
-      <fieldset>
-        <form action="/" method="post">	
-          <input name="city" type="text" class="ghost-input" placeholder="Enter a City" required>
-          <input type="submit" class="ghost-button" value="Get Weather">
-        </form>
-          <% if(weather !== null){ %>
-            <p><%= weather %></p>
-          <% } %>
 
-          <% if(error !== null){ %>
-            <p><%= error %></p>
-          <% } %>
-      </fieldset>
+  <script src="js/modernizr.custom.js"></script>
+</head>
+
+<body>
+  <header>
+    <div id="navigation" class="navbar navbar-inverse navbar-fixed-top default" role="navigation">
+      <div class="container">
+
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+
+          <a class="navbar-brand" href="index.html">Simple Weather</a>
+        </div>
+
+        <div class="navigation">
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <nav>
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+              </ul>
+            </nav>
+                <div class="col-md-3 pull-right">
+                  <form class="navbar-form" action="/" method="post">
+                    <div class="input-group">
+                      <input name = "city" type="text" class="ghost-input" placeholder="Enter a city" required>
+                          <input type="submit" class="ghost-button" value="Get Weather">
+                  </div>
+                  <% if(weather !== null){ %>
+                    <p><%= weather %></p>
+                  <% } %>
+
+                  <% if(error !== null){ %>
+                    <p><%= error %></p>
+                  <% } %>
+                  </form>
+                </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </body>
+
+  </header>
+  <!-- section intro -->
+  <section id="intro">
+    <ul id="slippry-slider">
+      <li>
+        <a href="#slide1"><img src="/img/slide/4.jpg" alt="Welcome to Simple Weather!"></a>
+      </li>
+      <li>
+        <a href="#slide2"><img src="/img/slide/2.jpg"  alt="This is a eloquent, neat weather app"></a>
+      </li>
+      <li>
+        <a href="#slide3"><img src="/img/slide/5.jpg" alt="Type your city name, and hit Get Weather!"></a>
+      </li>
+    </ul>
+  </section>
+
+ 
+  <!-- javascript -->
+  <script src="/js/jquery-1.9.1.min.js"></script>
+  <script src="/js/jquery.easing.js"></script>
+  <script src="/js/classie.js"></script>
+  <script src="/js/bootstrap.js"></script>
+  <script src="/js/slippry.min.js"></script>
+  <script src="/js/nagging-menu.js"></script>
+  <script src="/js/jquery.nav.js"></script>
+  <script src="/js/jquery.scrollTo.js"></script>
+  <script src="/js/jquery.fancybox.pack.js"></script>
+  <script src="/js/jquery.fancybox-media.js"></script>
+  <script src="/js/masonry.pkgd.min.js"></script>
+  <script src="/js/imagesloaded.js"></script>
+  <script src="/js/jquery.nicescroll.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8HeI8o-c1NppZA-92oYlXakhDPYR7XMY"></script>
+  <script src="/js/AnimOnScroll.js"></script>
+  <script>
+    new AnimOnScroll(document.getElementById('grid'), {
+      minDuration: 0.4,
+      maxDuration: 0.7,
+      viewportFactor: 0.2
+    });
+  </script>
+  <script>
+    $(document).ready(function() {
+      $('#slippry-slider').slippry(
+        defaults = {
+          transition: 'vertical',
+          useCSS: true,
+          speed: 5000,
+          pause: 3000,
+          initSingle: false,
+          auto: true,
+          preload: 'visible',
+          pager: false,
+        }
+
+      )
+    });
+  </script>
+
+  <script src="/js/custom.js"></script>
+
+</body>
+
 </html>
